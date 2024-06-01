@@ -1,0 +1,25 @@
+
+
+.send {
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navigate {
+    background-color: rgb(117, 117, 231);
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.navigate:disabled {
+    opacity: 0.5;
+}

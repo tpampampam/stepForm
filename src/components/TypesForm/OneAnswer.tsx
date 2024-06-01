@@ -1,0 +1,34 @@
+import { ButtonSend } from "../Buttons/ButtonSend";
+import { useGetFormData } from "../../hooks/useGetFormData ";
+import { PropsCheckbox } from "../../utils/types";
+
+import style from './Types.module.css'
+
+
+const OneAnswer = ({question, options}: PropsCheckbox) => {
+
+    const {answer, handleChange, onSubmit} = useGetFormData()
+
+    return(
+        <form onSubmit={onSubmit} className={style.single}>
+            <h3>{question}</h3>
+            {options!.map((option, index) => (
+                <div key={index}>
+                    <input 
+                        type="radio" 
+                        name="radioGroup"  
+                        value={option} 
+                        id={option}
+                        checked={answer === option} 
+                        onChange={handleChange}
+                    />
+                    <label htmlFor={option}>{option}</label>
+                </div>))
+            }
+            <ButtonSend>Ответить</ButtonSend>
+        </form>
+    )
+}
+
+
+export default OneAnswer;

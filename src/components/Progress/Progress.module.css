@@ -1,0 +1,12 @@
+
+.wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    width: 30px;  
+    height: 10px;
+    border: 1px solid black;          
+}
